@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="auth-page">
+
+    <div class="auth-card">
+
+        <h1>✨ خوش آمدی</h1>
+
+        <p>دوباره به استاریکو سر بزن ☁️</p>
+
+
+        <form method="POST">
+
+            <input 
+            type="email"
+            name="email"
+            placeholder="ایمیل"
+            required>
+
+
+            <input 
+            type="password"
+            name="password"
+            placeholder="رمز عبور"
+            required>
+
+
+            <button type="submit">
+                ورود 💜
+            </button>
+
+        </form>
+
+
+    </div>
+
+</section>
+
+{% endblock %}

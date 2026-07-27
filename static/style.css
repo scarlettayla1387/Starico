@@ -1,0 +1,1120 @@
+/* =========================================================
+   STARICO MASTER CSS
+   PART 1
+   Reset + Variables + Body + Sky + Navbar
+========================================================= */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:
+        url("/static/images/starico-sky.png")
+        center center / cover
+        no-repeat
+        fixed;
+
+    color:var(--text);
+
+    font-family:
+        "Nunito",
+        "Vazirmatn",
+        sans-serif;
+
+    overflow-x:hidden;
+
+}
+/* ---------- VARIABLES ---------- */
+
+:root{
+
+    /* COLORS */
+
+    --background:#FFFDF8;
+
+    --surface:#FFFFFF;
+
+    --primary:#9F7AEA;
+
+    --primary-hover:#8C65E8;
+
+    --secondary:#F8BBD9;
+
+    --text:#1d032e;
+
+    --muted:#350723;
+
+    --moon:#ffe89c;
+
+    --star:#f3d477;
+
+    --cloud:#ffffff;
+
+
+    /* RADIUS */
+
+    --radius-sm:16px;
+
+    --radius-md:24px;
+
+    --radius-lg:36px;
+
+
+    /* SHADOWS */
+
+    --shadow:
+
+        0 12px 35px rgba(159,122,234,.08),
+        0 4px 20px rgba(248,187,217,.12);
+
+    --shadow-hover:
+
+        0 18px 45px rgba(159,122,234,.14),
+        0 10px 30px rgba(248,187,217,.16);
+
+
+    /* TRANSITION */
+
+    --transition:.30s ease;
+
+}
+
+
+/* ---------- LINKS ---------- */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ---------- IMAGES ---------- */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+
+    width:92%;
+
+    max-width:1350px;
+
+    margin:24px auto;
+
+    padding:18px 32px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(181, 161, 218, 0.452);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:32px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.logo img{
+
+    width:50px;
+
+    height:50px;
+
+    object-fit:contain;
+
+}
+
+.logo:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:var(--muted);
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+    transform:translateX(-50%);
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover::after{
+
+    width:80%;
+
+}
+/* =========================================================
+   STARICO MASTER CSS
+   PART 2
+   HERO + SEARCH + BUTTON + STARI
+========================================================= */
+
+
+/* ---------- HERO ---------- */
+
+/* ===========================
+   FINAL HERO
+=========================== */
+
+
+.hero{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    width:94%;
+
+    max-width:1500px;
+
+    margin:70px auto;
+
+    padding:90px 90px;
+
+    overflow:hidden;
+
+    border-radius:45px;
+
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,253,248,.78),
+            rgba(220,215,255,.55)
+        );
+
+
+    backdrop-filter:blur(18px);
+
+
+    box-shadow:
+
+        0 25px 70px rgba(209, 137, 216, 0.699),
+
+        inset 0 0 40px rgba(149, 104, 167, 0.459);
+
+}
+
+
+
+/* TEXT */
+
+.hero-text{
+
+    flex:1;
+
+    max-width:650px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:12px 26px;
+
+    margin-bottom:18px;
+
+    border-radius:50px;
+
+    background:rgba(173, 223, 223, 0.514);
+
+    color:#9F7AEA;
+
+    font-size:26px;
+
+    font-weight:900;
+
+    box-shadow:
+        0 8px 25px rgba(248,187,217,.2);
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:72px;
+
+    line-height:1.08;
+
+    font-weight:900;
+
+    margin-bottom:18px;
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #9F7AEA,
+            #F08BB8
+        );
+
+
+    -webkit-background-clip: text;
+background-clip: text;
+
+    color:transparent;
+
+}
+
+
+
+.hero-description{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:var(--muted);
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* IMAGE */
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero-image img{
+
+    width:800px;
+
+    max-width:none;
+
+    height:auto;
+
+    object-fit:contain;
+
+
+    transform:scale(1.25);
+
+
+    filter:
+
+        drop-shadow(
+            0 35px 45px rgba(75,29,63,.15)
+        );
+
+
+    animation:floatStari 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes floatStari{
+
+
+    0%,100%{
+
+        transform:scale(1.25) translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.25) translateY(-15px);
+
+    }
+
+}
+
+
+
+/* SEARCH */
+
+.search-box{
+
+    margin-bottom:15px;
+
+}
+
+
+.search-box input{
+
+    margin-top:0;
+
+}
+
+
+
+/* BUTTON */
+
+.explore-btn{
+
+    margin-top:0;
+
+}
+
+
+/* BUTTON */
+
+.explore-btn{
+
+    margin-top:0;
+
+}
+/* ---------- SEARCH ---------- */
+
+.search-box{
+
+    margin-bottom:30px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    max-width:430px;
+
+    padding:18px 26px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    font-size:16px;
+
+    color:var(--text);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.search-box input:focus{
+
+    box-shadow:
+
+        0 0 0 4px rgba(159,122,234,.15),
+
+        var(--shadow);
+
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.explore-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.explore-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ---------- FLOAT ---------- */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-16px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =========================================================
+   STARICO MASTER CSS
+   PART 3
+   CATEGORIES + LOGIN CARDS + FOOTER
+========================================================= */
+
+/* ---------- CATEGORIES ---------- */
+
+.categories{
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+
+.category{
+
+    background:var(--surface);
+
+    border-radius:28px;
+
+    padding:38px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+
+.category:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+.category{
+
+    font-size:18px;
+
+    font-weight:800;
+
+    color:var(--text);
+
+}
+
+
+.category::first-line{
+
+    font-size:44px;
+
+}
+
+
+/* ---------- ENTRY SECTION ---------- */
+
+.entry-options{
+
+    width:92%;
+
+    max-width:900px;
+
+    margin:90px auto;
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+.entry-card{
+
+    flex:1;
+
+    background:var(--surface);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:var(--text);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+
+.entry-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+.entry-card{
+
+    font-size:46px;
+
+}
+
+
+.entry-card span{
+
+    display:block;
+
+    margin-top:18px;
+
+    font-size:20px;
+
+    font-weight:800;
+
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+    width:92%;
+
+    max-width:1350px;
+
+    margin:60px auto 30px;
+
+    padding:26px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:28px;
+
+    color:var(--muted);
+
+    box-shadow:var(--shadow);
+
+}
+/* =========================================================
+   STARICO MASTER CSS
+   PART 4
+   STARS + CLOUDS + RESPONSIVE + FINISH
+========================================================= */
+
+
+/* ---------- FLOATING STARS ---------- */
+
+.hero .star{
+
+    position:absolute;
+
+    color:var(--star);
+
+    animation:twinkle 3.5s ease-in-out infinite;
+
+    opacity:.8;
+
+    pointer-events:none;
+
+}
+
+.star.s1{
+
+    top:8%;
+    left:18%;
+
+    font-size:12px;
+
+}
+
+.star.s2{
+
+    top:18%;
+    right:16%;
+
+    font-size:16px;
+
+    animation-delay:.8s;
+
+}
+
+.star.s3{
+
+    bottom:20%;
+    left:10%;
+
+    font-size:14px;
+
+    animation-delay:1.5s;
+
+}
+
+.star.s4{
+
+    bottom:12%;
+    right:22%;
+
+    font-size:10px;
+
+    animation-delay:2.2s;
+
+}
+
+
+/* ---------- TWINKLE ---------- */
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.25;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        opacity:.25;
+
+        transform:scale(.8);
+
+    }
+
+}
+
+
+/* ---------- FLOATING CLOUDS ---------- */
+
+.cloud{
+
+    position:absolute;
+
+    background:rgba(255,255,255,.7);
+
+    border-radius:100px;
+
+    filter:blur(4px);
+
+    pointer-events:none;
+
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    background:inherit;
+
+    border-radius:50%;
+
+}
+
+.cloud::before{
+
+    width:45px;
+    height:45px;
+
+    left:18px;
+    top:-18px;
+
+}
+
+.cloud::after{
+
+    width:60px;
+    height:60px;
+
+    right:20px;
+    top:-26px;
+
+}
+
+.cloud.c1{
+
+    width:150px;
+    height:48px;
+
+    top:60px;
+    right:120px;
+
+    opacity:.45;
+
+}
+
+.cloud.c2{
+
+    width:180px;
+    height:55px;
+
+    bottom:70px;
+    left:80px;
+
+    opacity:.35;
+
+}
+
+
+/* ---------- HOVER ---------- */
+
+.category:hover{
+
+    color:var(--primary);
+
+}
+
+.entry-card:hover{
+
+    color:var(--primary);
+
+}
+
+.logo:hover{
+
+    transform:translateY(-2px) scale(1.02);
+
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+
+    .hero-text{
+
+        max-width:100%;
+
+    }
+
+    .search-box input{
+
+        max-width:100%;
+
+    }
+
+    .hero-image img{
+
+    width:750px !important;
+
+    max-width:140% !important;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transform:scale(1.25) !important;
+
+    filter:drop-shadow(
+        0 35px 45px rgba(75,29,63,.15)
+    );
+
+    animation:floatStari 4s ease-in-out infinite;
+
+}
+
+
+@keyframes floatStari{
+
+    0%,100%{
+        transform:scale(1.25) translateY(0);
+    }
+
+    50%{
+        transform:scale(1.25) translateY(-15px);
+    }
+
+}
+    .categories{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .entry-options{
+
+        flex-direction:column;
+
+    }
+
+
+
+@media (max-width:600px){
+
+
+
+    .hero-description{
+
+        font-size:17px;
+
+    }
+
+    .categories{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+}
+/* ---------- SELECTION ---------- */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+.auth-page{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+
+.auth-card{
+    width:380px;
+    background:#fffdf8;
+    padding:40px;
+    border-radius:35px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(159,122,234,.18);
+}
+
+
+.auth-card h1{
+    color:#4B1D3F;
+    margin-bottom:10px;
+}
+
+
+.auth-card p{
+    color:#7A6A74;
+    margin-bottom:30px;
+}
+
+
+.auth-card input{
+    width:100%;
+    box-sizing:border-box;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    background:#ffffff;
+    box-shadow:0 5px 15px rgba(159,122,234,.08);
+    font-family:Vazirmatn;
+}
+
+
+.auth-card button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:20px;
+    background:#9F7AEA;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+.auth-card button:hover{
+    transform:translateY(-3px);
+}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-page">
+
+    <div class="dashboard-welcome cloud-card">
+        <div>
+            <h1>سلام به روی ماهت {{ username }}✨</h1>
+            <p>به فضای شخصی استاریکو خوش اومدی☁️</p>
+        </div>
+
+        <div class="avatar">
+             ♥
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+            <div class="icon">🎁</div>
+            <h3>سفارش‌ها</h3>
+            <p>هنوز سفارشی نداری</p>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="icon">💜</div>
+            <h3>علاقه‌مندی‌ها</h3>
+            <p>محصولات ذخیره شده</p>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="icon">⭐</div>
+            <h3>امتیاز</h3>
+            <p>0 امتیاز</p>
+        </div>
+
+    </div>
+
+    <div class="dashboard-menu cloud-card">
+
+        <a href="#">👼🏻 پروفایل</a>
+        <a href="#">📦 سفارش‌های من</a>
+        <a href="#">💜 علاقه‌مندی‌ها</a>
+        <a href="#">⚙ تنظیمات</a>
+        <a href="/logout">🚪 خروج از حساب</a>
+    </div>
+
+</section>
+
+{% endblock %}

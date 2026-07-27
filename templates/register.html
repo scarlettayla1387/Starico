@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="auth-page">
+
+    <div class="auth-card cloud-card">
+
+        <h1>✨ساخت حساب کاربری</h1>
+
+        <p>
+            به استاریکو خوش آمدی ☁️
+        </p>
+
+
+        <form method="POST">
+
+            <input 
+            type="text"
+            name="username"
+            placeholder="نام کاربری"
+            required>
+
+
+            <input 
+            type="email"
+            name="email"
+            placeholder="ایمیل"
+            required>
+
+
+            <input 
+            type="password"
+            name="password"
+            placeholder="رمز عبور"
+            required>
+
+
+            <button type="submit">
+               ساخت حساب  💜
+            </button>
+
+        </form>
+
+
+    </div>
+
+</section>
+
+{% endblock %}

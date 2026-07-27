@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <p class="hero-tag">
+            ✨ Welcome to Starico
+        </p>
+
+
+        <h1>
+            Discover Handmade
+            <br>
+            Treasures
+        </h1>
+
+
+        <p class="hero-description">
+
+            A magical marketplace where
+            artists, dreamers and handmade
+            creations come together.
+
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="👀 search your dreams here..."
+            >
+
+        </div>
+
+
+        <a href="/products" class="explore-btn">
+
+            ✨ Explore
+
+        </a>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <img 
+        src="{{ url_for('static', filename='images/stari.png') }}" 
+        alt="Stari">
+
+    </div>
+
+
+</section>
+
+
+
+
+<section class="categories">
+
+
+    <div class="category">
+
+        🧶
+        <br>
+        Crochet
+
+    </div>
+
+
+
+    <div class="category">
+
+        💍
+        <br>
+        Jewelry
+
+    </div>
+
+
+
+    <div class="category">
+
+        🎨
+        <br>
+        Art
+
+    </div>
+
+
+
+    <div class="category">
+
+        🏡
+        <br>
+        Home Decor
+
+    </div>
+
+
+</section>
+
+
+
+
+<section class="entry-options">
+
+
+    <a href="/login/customer" class="entry-card">
+
+        🧍‍♀️🧍‍♂️
+
+        <span>
+            Customer
+        </span>
+
+    </a>
+
+
+
+    <a href="/login/seller" class="entry-card">
+
+        🛍️
+
+        <span>
+            Become a Seller
+        </span>
+
+    </a>
+
+
+</section>
+
+
+{% endblock %}

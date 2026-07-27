@@ -1,0 +1,6 @@
+instance/
+database.db
+__pycache__/
+*.pyc
+.env
+desktop.ini
