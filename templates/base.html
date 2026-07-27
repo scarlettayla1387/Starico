@@ -14,69 +14,63 @@
 
     <title>Starico</title>
 
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Vazirmatn:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
-{% block extra_css %}
-{% endblock %}
-</head>
 
+    {% block extra_css %}
+    {% endblock %}
+
+</head>
 
 <body>
 
-
 <header class="navbar">
-
 
     <a href="/" class="logo">
 
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <img src="{{ url_for('static', filename='images/Logo.png') }}"
+             alt="Starico Logo">
 
         <span>Starico</span>
 
     </a>
 
+    <nav class="nav-links">
 
-   <nav class="nav-links">
+        <a href="/">خانه</a>
 
-    <a href="/">خانه</a>
+        <a href="/products">محصولات</a>
 
-    <a href="/products">محصولات</a>
+        <a href="/login">ورود</a>
 
-    <a href="/login">ورود</a>
+        <a href="/register">ثبت‌نام</a>
 
-    <a href="/register">ثبت‌نام</a>
-
-</nav>
-
+    </nav>
 
 </header>
 
-
-
 <main>
 
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 
 </main>
-
-
 
 <footer>
 
     © 2026 Starico • Made with 💜
 
 </footer>
-
 
 </body>
 
